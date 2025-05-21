@@ -47,14 +47,55 @@ img{
     font-size:4rem;
 }
 .msg-container{
-    margin-top:5rem;
+    display:inline-flex;
+    margin: 5rem;
+    flex-direction: column;
+    gap:2rem;
+}
+.reset-btn{
+    background-color:cadetblue;
+    color:white;
+    font-size: 1rem;
+    display: inline;
+    padding:1rem;
+    border-radius: 1rem;
 }
 #msg{
-    
     background-color: #081b31;
     color:white;
     font-size: 2rem;
     display: inline;
     padding:1rem;
     border-radius: 1rem;
+}
+/* Animations */
+.choice.shake {
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.score-pop {
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+#msg {
+    transition: background-color 0.4s ease;
+}
+
+.reset-btn:hover {
+    background-color: darkcyan;
+    transition: background-color 0.3s ease;
 }
